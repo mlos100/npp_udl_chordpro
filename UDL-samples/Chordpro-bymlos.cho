@@ -1,0 +1,265 @@
+#
+# Sample file containing two songs in ChordPro format:
+#  - Twinkle Twinkle Little Star
+#  - The Old Rugged Cross
+#
+# The ChordPro format text-based markup language for representing chord 
+# charts by describing the position of chords in relation to the song's 
+# lyrics. ChordPro also provides markup to denote song sections 
+# (e.g., verse, chorus), song metadata (e.g., title, tempo), and other 
+# annotations, such as notes to the musician.
+#
+# ChordPro files are intended to be input to software that prepares a 
+# formatted chord sheet for screen display or printing
+# For information about the ChordPro file format, refer to:
+# ChordPro.org web site, https://chordpro.org/
+# ChordPro on Wikipedia, https://en.wikipedia.org/wiki/ChordPro
+# Line comments begin with a pound symbol '#' and are intended for 
+# the chord sheet author are not presented on a formatted chord sheet.
+{title: Twinkle Twinkle Little Star}
+{subtitle: originally sung to the French Melody "Ah! vous dirai-je, maman"}
+{key: C}
+{time: 4/4}
+{lyricist: Jane Taylor}
+{copyright: Public Domain}
+{year: lyrics 1879}
+{year: music 1740}
+{composer: Anonymous}
+# The meta keyword allows non-standard directive names to be captured.
+{meta: ccli: 123456}
+# The x_ prefix is recommended for vendor-specific directive names.
+{x_mspro_somekey: some value}
+
+# Display several vector-drawn stars (in different sizes)
+# svg sections are at end of file (to keep out of the way)
+{image id="star" scale="0.12" anchor="paper" x="20" y="40"}
+{image id="star" scale="0.15" anchor="paper" x="47" y="20"}
+{image id="star" scale="0.12" anchor="paper" x="80" y="40"}
+
+# Display some notes in blank space in the upper right
+{image id=song_meta anchor="paper" x="100%" y="2%"}
+
+# Most applications provide the ability display chord
+# diagrams on the page. Here, set it off.
+# The directive is presented in a different color than 
+# other directives because it is considered a legacy
+# directive and the instruction to display diagrams
+# should be done in a(n) (application-specific) configuration file.
+{diagrams: off}
+
+# Several examples of comment directives
+{comment: Comments directives are used for notes on the chord sheet. }
+{c: Short name for the comment directive}
+{comment_italic: Comment statement presented italicized}
+{ci: short name same as the comment_italic}
+{comment_box: Comment presented with a box around it}
+{cb: short name same as the comment_box}
+{highlight: The highlight directive is an alternative to the comment directive.}
+
+{start_of_verse: V1}
+[C]Twinkle, twinkle, [F]little [C]star, [G7]How I wonder what you [C]are!
+[G7]Up above the world so high, [G7]Like a diamond in the sky.
+[C]Twinkle, twinkle, [F]little [C]star, [G7]How I wonder what you [C]are!
+{end_of_verse}
+
+# All directives can be conditionally selected by postfixing the directive with a dash 
+# (hyphen) and a selector whose definition and selection is application-speicifc.
+{comment-alto:  Very softly!}
+
+{start_of_verse: V2}
+[C]When the blazing [F]sun is [C]gone, [G7]When he nothing shines upon,
+[G7]Then you show your little light, [G7]Twinkle, twinkle, all the night.
+[C]Twinkle, twinkle, [F]little [C]star, [G7]How I wonder what you [C]are!
+{end_of_verse}
+
+{start_of_verse: V3}
+[C]In the dark blue [F]sky you [C]keep, [G7]And often thro' my curtains peep,
+[G7]For you never shut your eye, [G7]Till the sun is in the sky.
+[C]Twinkle, twinkle, [F]little [C]star, [G7]How I wonder what you [C]are!
+{end_of_verse}
+
+{start_of_verse: V4}
+[C]'Tis your bright and [F]tiny [C]spark, [G7]Lights the trav'ller in the dark,
+[G7]Tho' I know not what you are, [G7]Twinkle, twinkle, little star.
+[C]Twinkle, twinkle, [F]little [C]star, [G7]How I wonder what you [C]are!
+{end_of_verse}
+
+# Present the basic melody
+{image id=melody scale="80%" }
+
+
+# Example of ASCII tab enclosed in start_of_tab/end_of_tab directives
+{comment: Simple Melody in ASCII Tab}
+{start_of_tab}
+ |---------|---------|---------|---------|
+ |-----5-5-|-7-7-5---|-3-3-2-2-|-0-0-----|
+ |-3-3-----|---------|---------|-----3---|
+ |---------|---------|---------|---------|
+{end_of_tab}
+
+
+# Present informational text at the bottom of the page
+{textcolour: grey}
+{textsize: 70%}
+# metadata substitution prints Copyright only if it was provided a value above
+%{copyright|Copyright %{copyright}}
+%{lyricist| lyrics by %{lyricist}} from the poem, "The Star"
+# Leave out the size and color values to set back to default
+{textsize}
+{textcolour}
+
+
+# - - - - - - - - - - -
+# MELODY in ABC NOTATION
+# - - - - - - - - - - -
+# abc music nottation can be enlosed inside  start__of_abc/end_of_abc
+# directives to present music notation (e.g., on a staff)
+# abc notation home page: https://abcnotation.com/
+{start_of_abc}
+id=melody
+X:1
+T:Melody
+L:1/4
+M:{%time}
+%%barsperstaff 4
+%%titlefont serif 11
+%%vocalfont serif 10
+K:C
+"C"C C G G|"F"A A "C"G2|"G7"F F E E|D D "C"C2|
+w: Twin-kle, twin-kle, lit-tle star, How I won-der what you are!
+"G7"G G F F|E E D2|"G7"G G F F|E E D2|
+w: Up a-bove the world so high, Like a dia-mond in the sky.
+"C"C C G G|"F"A A "C"G2|"G7"F F E E|D D "C"C2|]
+w: Twin-kle, Twin-kle, lit-tle star, How I won-der what you are!
+
+{end_of_abc}
+
+# - - - - - - - - - - -
+# STAR SVG DEFINITION
+# - - - - - - - - - - -
+# An SVG element can be enlosed inside  start__of_svg/end_of_svg
+# directives to present vector-based graphics
+{start_of_svg}
+id="star"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="255" height="240" viewBox="0 0 54 48">
+<title>Five Pointed Star</title>
+<path fill="yellow" stroke="#000" d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"/>
+</svg>
+{end_of_svg}
+
+
+# - - - - - - - - - - -
+# SONG_META DEFINITION
+# - - - - - - - - - - -
+# SVG Text used to present some metadata values and notes
+# in some blank space in the upper right
+{start_of_svg}
+id=song_meta
+<svg version="1.1"  viewbox="0 0 110 65"  xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* The color of the text is set with the fill property. */
+    text {
+      font: 9px sans-serif;
+      fill:blue;
+    }
+  </style>
+
+  <text text-anchor="left" x="5" y="10">
+    <tspan>Key: %{key}</tspan>
+    <tspan x="5" dy="11">English Lullaby</tspan>
+    <tspan x="5" dy="11">Time: %{time}</tspan>
+  </text>
+
+</svg>
+{end_of_svg}
+
+
+# - - - - - - - - - - -
+# Resources
+# - - - - - - - - - - -
+# Wikipedia
+# https://en.wikipedia.org/wiki/Twinkle,_Twinkle,_Little_Star#:~:text=The%20song%20is%20in%20the%20public%20domain.
+# https://en.wikipedia.org/wiki/Ah!_vous_dirai-je,_maman
+# Library of Congress
+# https://www.loc.gov/item/sm1879.02893/
+
+
+
+# - - - - - - - - - - -
+# A Second Song in the Same File
+# - - - - - - - - - - -
+# The new_song directive can be used to distinguish multiple songs 
+# in one file.
+{new_song}
+{title: The Old Rugged Cross}
+# sorttitle defines the 'sorting title' that will be used by applications
+# that create table of contents in a songbook.
+{sorttitle: Old Rugged Cross, The}
+{time: 3/4}
+{lyricist: George Bennard}
+{composer: George Bennard}
+{copyright: Public Domain}
+
+# The key pertains to the chords, as written, 
+# When a capo is in effect, the key for fellow muscians 
+# and listeners differs e.g., Key of G + 3 semitones is Bb)
+# perceived by the listener. 
+{key: G}
+{capo: 3}
+
+# Grid sections denote instrumental sections and list chords only.
+# left_spacing+measuresxbeats+right_spacing
+{start_of_grid: 1+3x4+8 Intro}
+| G . . . | D7 . . . | G . . . |
+{end_of_grid}
+
+{start_of_verse: V1}
+On a [G]hill far away stood an [C]old rugged cross,
+The [D7]emblem of suffring and [G]shame;
+      G    Gdim   G            C    D#7   D
+And I [G]love that old cross where [C]the dearest and best
+ A     D7               D/G  D7   G
+For a [D]world of lost sinners was [G]slain.
+{end_of_verse}
+
+{start_of_chorus}
+ So I'll [D]cherish the old rugged [G]cross.
+ Till my [C]trophies at last I lay [G]down; [D]
+ I will [G]cling to the [G7]old rugged [C]cross, [Am7]
+ And ex[G]change it some [D]day for a [G]crown.  [D]
+{end_of_chorus}
+
+{start_of_verse: V2}
+Oh that [G]old rugged cross, so [C]despised by the world.
+Has a [D]wondrous attraction for [G]me,
+For the [G]dear Lamb of God left His [C]glory above,
+To bear [D]it to dark caval[G]ry.
+{end_of_verse}
+
+# The chorus directive sends the musician to the chorus
+{chorus}
+
+{start_of_verse: V3}
+# Some chord sheet authors will not include chords on later 
+# verses to save space.
+In the old rugged cross, stained with blood so divine,
+A wondrous beauty I see.
+For 'twas on that old cross Jesus suffered and died
+To pardon and sanctify me.
+{end_of_verse}
+
+# Different authors use various conventions to
+# direct flow through the chord sheet.
+{comment_italic: to Chorus}
+
+
+# Pango markup language can be used to present formatted annotations.
+# https://docs.gtk.org/Pango/pango_markup.html
+<span foreground="blue" size="x-large">This song is incomplete!</span>
+
+# Present informational text at the bottom of the page
+{textcolour: grey}
+{textsize: 70%}
+%{copyright|Copyright %{copyright}}
+{textsize}
+{textcolour}
