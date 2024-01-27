@@ -1,6 +1,6 @@
-# Notedpad++ User Defined Language for ChordPro
+# Notepad++ User Defined Language for ChordPro
 
-![GitHub Discussions](https://img.shields.io/github/discussions/mlos100/npp_udl_chordpro)
+[![GitHub Discussions](https://img.shields.io/github/discussions/mlos100/npp_udl_chordpro)](https://github.com/mlos100/npp_udl_chordpro/discussions)
 [![license](https://img.shields.io/github/license/mlos100/npp_udl_chordpro.svg)](LICENSE)
 
 Notepad++ User Defined Language (UDL) for the ChordPro file format.
