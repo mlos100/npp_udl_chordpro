@@ -30,9 +30,9 @@ A sample ChordPro file that exercises a variety of ChordPro directives can be fo
 
 The images below depict the syntax highlighting in action in the dark mode and light modes.
 <p float="left">
-    <img src="images/Chordpro-Dark_Warm-01.png" alt="Dark Mode" title="ChordPro Highlighting in Dark Mode" width="40%" valign="top"/> 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    |<img src="images/Chordpro-Light_Warm-01.png" alt="Light Mode" title="ChordPro Highlighting in Light Mode" width="40%" valign="top"/> 
+    <img src="images/Chordpro-Dark_Warm-01.png" alt="Dark Mode" title="ChordPro Highlighting in Dark Mode" width="45%" valign="top"/> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    |<img src="images/Chordpro-Light_Warm-01.png" alt="Light Mode" title="ChordPro Highlighting in Light Mode" width="45%" valign="top"/> 
 </p>
 
 
