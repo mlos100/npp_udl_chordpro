@@ -30,9 +30,9 @@ A sample ChordPro file that exercises a variety of ChordPro directives can be fo
 
 The images below depict the syntax highlighting in action in the dark mode and light modes.
 <p float="left">
-    <img src="images/Chordpro-Dark_Warm-01.png" alt="Dark Mode" title="ChordPro Highlighting in Dark Mode" height="480" valign="top"/> 
+    <img src="images/Chordpro-Dark_Warm-01.png" alt="Dark Mode" title="ChordPro Highlighting in Dark Mode" width="40%" valign="top"/> 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    |<img src="images/Chordpro-Light_Warm-01.png" alt="Light Mode" title="ChordPro Highlighting in Light Mode" width="480" valign="top"/> 
+    |<img src="images/Chordpro-Light_Warm-01.png" alt="Light Mode" title="ChordPro Highlighting in Light Mode" width="40%" valign="top"/> 
 </p>
 
 
@@ -42,7 +42,7 @@ Follow these steps to add a new User Defined Language to your Notepad++ installa
 1. Decide whether to download the UDL for light or dark mode from the [UDLs] folder.
 2. Select Notepad++'s menu entry, **Language > User Defined Language > Open User Defined Language folder...** to open the Windows File Explorer at the `userDefineLangs\` folder.
 Copy the path from the file Explorer location bar for pasting into the **Save As** dialog in the next step.
-3. Download the raw XML file  by using the "Raw" button on the file's page to display the UDL source. From here, you can either:
+3. Download the UDL file  from the Releases page or by using the "Raw" button on the file's page to display the UDL source. From here, you can either:
     - use your browser's **Right Click > Save As...** feature to save the raw XML file to the `userDefineLangs\` folder found from the previous step.
     - copy and paste the file's content into a new file in Notepad++ and then save it as an XML file to the `userDefineLangs\` folder.
    - **Warning:** Do not just right click to try to download the file from the directory listing links. This will download the GitHub web page for that file (which is HTML, and _not_ the UDL's XML file) and will _not_ work.
